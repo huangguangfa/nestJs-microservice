@@ -3,7 +3,6 @@ import { FileStream } from './fileStream';
 import { LogStream } from './logStream';
 
 import { multistream } from 'pino-multi-stream';
-// const multiStream = multiStreams.multistream;
 
 function asReqValue(req) {
   if (req.raw) {

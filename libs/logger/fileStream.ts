@@ -1,9 +1,7 @@
 import { dirname } from 'path';
 import { createWriteStream, stat, rename } from 'fs';
-// eslint-disable-next-line @typescript-eslint/no-var-requires
-const assert = require('assert');
-// eslint-disable-next-line @typescript-eslint/no-var-requires
-const mkdirp = require('mkdirp');
+import * as assert from 'assert';
+import * as mkdirp from 'mkdirp';
 
 import { LogStream } from './logStream';
 
@@ -195,8 +193,6 @@ export class FileStream extends LogStream {
    * 检测日志分割
    */
   _checkRotate() {
-    const flag = false;
-
     const plusName = this._getPlusName();
     if (plusName === this.lastPlusName) {
       return;

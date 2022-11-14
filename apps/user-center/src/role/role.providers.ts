@@ -1,4 +1,4 @@
-import { Role } from './role.mysql.entity';
+import { Role } from './entity/role.mysql.entity';
 
 export const RoleProviders = [
   {

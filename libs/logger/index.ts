@@ -1,5 +1,4 @@
 import { join } from 'path';
-
 import { fastLogger } from './logger';
 
 const logOpt = {
