@@ -1,8 +1,9 @@
 import { dirname } from 'path';
 import { createWriteStream, stat, rename } from 'fs';
-
-import assert from 'assert';
-import mkdirp from 'mkdirp';
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const assert = require('assert');
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const mkdirp = require('mkdirp');
 
 import { LogStream } from './logStream';
 

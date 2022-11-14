@@ -1,7 +1,11 @@
-import chalk from 'chalk';
-import dayjs from 'dayjs';
-import split from 'split2';
-import JSONparse from 'fast-json-parse';
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const chalk = require('chalk');
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const dayjs = require('dayjs');
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const split = require('split2');
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const JSONparse = require('fast-json-parse');
 
 const levels = {
   [60]: 'Fatal',
