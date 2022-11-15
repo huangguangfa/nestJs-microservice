@@ -1,20 +1,16 @@
 import { DataSource, DataSourceOptions } from 'typeorm';
 import { getConfig } from '../../../utils';
-import * as path from 'node:path';
+import { NamingStrategy } from './naming.strategies';
+import entityList from './entity';
 
 // 设置数据库类型
 const databaseType: DataSourceOptions['type'] = 'mysql';
 const { MYSQL_CONFIG } = getConfig();
-const entityPath = path.join(
-  __dirname,
-  '../../../../**/',
-  `*.${MYSQL_CONFIG.entities}.entity{.ts,.js}`,
-);
-console.log(1111, entityPath);
 const MYSQL_DATABASE_CONFIG = {
   ...MYSQL_CONFIG,
   type: databaseType,
-  entities: [entityPath],
+  NamedNodeMap: new NamingStrategy(),
+  entities: [...entityList],
 };
 
 const MYSQL_DATA_SOURCE = new DataSource(MYSQL_DATABASE_CONFIG);
