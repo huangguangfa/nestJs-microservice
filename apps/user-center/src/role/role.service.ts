@@ -1,5 +1,5 @@
 import { Injectable, Inject } from '@nestjs/common';
-import { MongoRepository } from 'typeorm';
+import { Repository } from 'typeorm';
 import { Role } from './entity/role.mysql.entity';
 import { AddRoleDto } from './vo/role.dto';
 
@@ -7,11 +7,11 @@ import { AddRoleDto } from './vo/role.dto';
 export class RoleService {
   constructor(
     @Inject('ROLE_REPOSITORY')
-    private roleRepository: MongoRepository<Role>,
+    private roleRepository: Repository<Role>,
   ) {}
 
-  add(role: AddRoleDto) {
-    return this.roleRepository.save(role);
+  add(roleInfo: AddRoleDto) {
+    return this.roleRepository.save(roleInfo);
   }
   getRoleList() {
     return this.roleRepository.find();

@@ -1,4 +1,10 @@
-import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
+import {
+  Entity,
+  Column,
+  PrimaryGeneratedColumn,
+  CreateDateColumn,
+  UpdateDateColumn,
+} from 'typeorm';
 
 @Entity()
 export class Role {
@@ -7,4 +13,10 @@ export class Role {
 
   @Column({ default: null })
   name: string;
+
+  @CreateDateColumn({ comment: '创建时间', type: 'datetime' })
+  createDate: Date;
+
+  @UpdateDateColumn({ comment: '更新时间' })
+  updateDate: Date;
 }
