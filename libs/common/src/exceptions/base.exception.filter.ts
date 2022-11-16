@@ -6,7 +6,6 @@ import {
   ArgumentsHost,
   HttpStatus,
   ServiceUnavailableException,
-  HttpException,
 } from '@nestjs/common';
 
 @Catch()

@@ -5,10 +5,12 @@ export function fastifyInstance() {
   const fastifyInstance = fastify({
     logger: FastifyLogger,
   });
-
   fastifyInstance.addHook('preHandler', function (req, reply, done) {
     if (req.body) {
-      req.log.info({ body: JSON.stringify(req.body) });
+      const params = `请求参数 =>>>>> body：${JSON.stringify(
+        req.body,
+      )} -- query：${JSON.stringify(req.query)}`;
+      req.log.info(params);
     }
     done();
   });

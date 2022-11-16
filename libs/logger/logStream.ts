@@ -60,13 +60,10 @@ export class LogStream {
     const logId = data.reqId || '_logId_';
 
     let reqInfo = '[-]';
-    // console.log('111', data.raw?.body);
     if (data.req) {
       reqInfo = `[${data.req.remoteAddress || ''} - ${data.req.method} - ${
         data.req.url
-      }] query: ${JSON.stringify(data.req.query)} body:${JSON.stringify(
-        data.req.body,
-      )} } `;
+      }]`;
     }
 
     if (data.res) {
@@ -79,6 +76,6 @@ export class LogStream {
     }
     return `${Level} | ${DateTime} | ${logId} | ${reqInfo} | ${
       data.stack || data.msg
-    }\n >>>>>>>`;
+    }`;
   }
 }

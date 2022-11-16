@@ -3,8 +3,16 @@ import { fastLogger } from './logger';
 
 const logOpt = {
   console: process.env.NODE_ENV !== 'production', // 是否开启 console.log
+  redact: ['req.headers.authorization'],
   level: 'info',
   serializers: {
+    // res(reply) {
+    //   debugger;
+    //   const resText = `响应结果：${JSON.stringify(
+    //     reply.request.body,
+    //   )}--- statusCode：${reply.statusCode}`;
+    //   return resText;
+    // },
     // 需要的额外数据
     req: (req) => {
       return {
@@ -12,6 +20,10 @@ const logOpt = {
         url: req.url,
         query: req.query,
         body: req.body,
+        headers: req.headers,
+        hostname: req.hostname,
+        remoteAddress: req.ip,
+        remotePort: req.socket.remotePort,
       };
     },
   },
