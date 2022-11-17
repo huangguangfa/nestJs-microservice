@@ -1,7 +1,7 @@
 import { Module } from '@nestjs/common';
 import { RoleModule } from './role/role.module';
 import { ConfigModule } from '@nestjs/config';
-import { getConfig } from '../../../libs/utils/index';
+import { getConfig } from '@app/common/utils/index';
 
 @Module({
   imports: [

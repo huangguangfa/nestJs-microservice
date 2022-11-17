@@ -22,6 +22,12 @@
       "@app/common": [
         "libs/common/src"
       ],
+      "@app/user":[
+        "apps/user-center/src"
+      ],
+      "@/logger":[
+       "libs/common/src/logger"
+      ],
       "@app/common/*": [
         "libs/common/src/*"
       ]

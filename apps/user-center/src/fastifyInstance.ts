@@ -1,5 +1,5 @@
 import fastify from 'fastify';
-import { FastifyLogger } from '../../../libs/logger';
+import { FastifyLogger } from '@app/common/logger';
 
 export function fastifyInstance() {
   const fastifyInstance = fastify({

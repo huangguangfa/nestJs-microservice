@@ -7,11 +7,11 @@ import {
   NestFastifyApplication,
 } from '@nestjs/platform-fastify';
 
-import { TransformInterceptor } from '../../../libs/common/src/interceptors/transform.interceptor';
-import { AllExceptionsFilter } from '../../../libs/common/src/exceptions/base.exception.filter';
-import { HttpExceptionFilter } from '../../../libs/common/src/exceptions/http.exception.filter';
+import { TransformInterceptor } from '@app/common/interceptors/transform.interceptor';
+import { AllExceptionsFilter } from '@app/common/exceptions/base.exception.filter';
+import { HttpExceptionFilter } from '@app/common/exceptions/http.exception.filter';
 
-import { generateDocument } from '../../..//doc';
+import { generateDocument } from '../../../doc';
 
 import { AppModule } from './app.module';
 
@@ -40,7 +40,7 @@ async function bootstrap() {
     module.hot.dispose(() => app.close());
   }
 
-  await app.listen(3000);
+  await app.listen(6007);
 }
 
 bootstrap();

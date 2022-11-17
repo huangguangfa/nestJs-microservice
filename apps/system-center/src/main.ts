@@ -1,5 +1,5 @@
 import { NestFactory } from '@nestjs/core';
-import { SystemCenterModule } from './system-center.module';
+import { SystemCenterModule } from './app.module';
 
 async function bootstrap() {
   const app = await NestFactory.create(SystemCenterModule);

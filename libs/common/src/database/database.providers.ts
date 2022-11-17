@@ -1,5 +1,5 @@
 import { DataSource, DataSourceOptions } from 'typeorm';
-import { getConfig } from '../../../utils';
+import { getConfig } from '@app/common/utils';
 import { NamingStrategy } from './naming.strategies';
 import entityList from './entity';
 

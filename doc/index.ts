@@ -1,7 +1,9 @@
 import { SwaggerModule, DocumentBuilder } from '@nestjs/swagger';
 import * as packageConfig from '../package.json';
 
-export const generateDocument = (app) => {
+import type { NestFastifyApplication } from '@nestjs/platform-fastify';
+
+export const generateDocument = (app: NestFastifyApplication) => {
   const options = new DocumentBuilder()
     .setTitle(packageConfig.name)
     .setDescription(packageConfig.description)
