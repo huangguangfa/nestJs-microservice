@@ -1,11 +1,13 @@
-import { Post } from '@nestjs/common';
+import { MessagePattern } from '@nestjs/microservices';
+
 import { Controller } from '@nestjs/common';
 import { MenuService } from './menu.service';
-@Controller('menu')
+
+@Controller()
 export class MenuController {
   constructor(private readonly menuService: MenuService) {}
 
-  @Post('/list')
+  @MessagePattern('systemMenuList')
   getList() {
     return this.menuService.getMenuList();
   }

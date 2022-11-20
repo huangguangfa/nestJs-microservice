@@ -6,4 +6,4 @@ import { MenuModule } from './menu/menu.module';
   controllers: [],
   providers: [],
 })
-export class SystemCenterModule {}
+export class AppModule {}

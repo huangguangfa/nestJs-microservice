@@ -9,22 +9,22 @@
     "tsConfigPath": "apps/nestjs-microservice/tsconfig.app.json"
   },
   "projects": {
-    "user-center": {
+    "user": {
       "type": "application",
-      "root": "apps/user-center",
+      "root": "apps/user",
       "entryFile": "main",
-      "sourceRoot": "apps/user-center/src",
+      "sourceRoot": "apps/user/src",
       "compilerOptions": {
-        "tsConfigPath": "apps/user-center/tsconfig.app.json"
+        "tsConfigPath": "apps/user/tsconfig.app.json"
       }
     },
-    "system-center": {
+    "system": {
       "type": "application",
-      "root": "apps/system-center",
+      "root": "apps/system",
       "entryFile": "main",
-      "sourceRoot": "apps/system-center/src",
+      "sourceRoot": "apps/system/src",
       "compilerOptions": {
-        "tsConfigPath": "apps/system-center/tsconfig.app.json"
+        "tsConfigPath": "apps/system/tsconfig.app.json"
       }
     },
     "common": {
@@ -34,6 +34,15 @@
       "sourceRoot": "libs/common/src",
       "compilerOptions": {
         "tsConfigPath": "libs/common/tsconfig.lib.json"
+      }
+    },
+    "gateway": {
+      "type": "application",
+      "root": "apps/gateway",
+      "entryFile": "main",
+      "sourceRoot": "apps/gateway/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/gateway/tsconfig.app.json"
       }
     }
   }
