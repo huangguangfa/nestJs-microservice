@@ -1,12 +1,12 @@
-import { Controller, Get, Inject } from '@nestjs/common';
+import { Controller, Post, Inject } from '@nestjs/common';
 import { ClientProxy } from '@nestjs/microservices';
 
 @Controller('gateway')
 export class AppController {
-  constructor(@Inject('SYSTEM_SERVICE') private client: ClientProxy) {}
+  constructor(@Inject('SYSTEM_SERVICE') private readonly client: ClientProxy) {}
 
-  @Get('list')
+  @Post('list')
   async getHello() {
-    return this.client.send('systemMenuList', '1');
+    return this.client.send({ cmd: 'getList' }, '1');
   }
 }

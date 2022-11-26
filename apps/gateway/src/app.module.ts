@@ -9,19 +9,12 @@ import { AppController } from './app.controller';
       {
         name: 'SYSTEM_SERVICE',
         transport: Transport.TCP,
+        options: {
+          port: 8200,
+        },
       },
     ]),
   ],
   controllers: [AppController],
-  providers: [
-    // {
-    //   provide: 'SYSTEM_SERVICE',
-    //   useFactory: (configService: ConfigService) => {
-    //     const mathSvcOptions = configService.getMathSvcOptions();
-    //     return ClientProxyFactory.create(mathSvcOptions);
-    //   },
-    //   inject: [ConfigService],
-    // },
-  ],
 })
 export class AppModule {}
