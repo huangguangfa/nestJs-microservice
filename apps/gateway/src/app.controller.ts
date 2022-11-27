@@ -7,6 +7,6 @@ export class AppController {
 
   @Post('list')
   async getHello() {
-    return this.client.send({ cmd: 'getList' }, '1');
+    return this.client.send({ cmd: 'menu' }, 1);
   }
 }

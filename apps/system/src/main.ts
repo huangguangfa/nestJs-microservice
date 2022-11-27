@@ -12,7 +12,7 @@ async function bootstrap() {
       },
     },
   );
-  app.listen();
-  console.log(`http://localhost:4100`);
+  await app.listen();
+  console.log(`http://localhost:8200`);
 }
 bootstrap();

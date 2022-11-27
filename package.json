@@ -13,7 +13,7 @@
     "start:dev": "cross-env RUNNING_ENV=dev nest start --webpack --webpackPath webpack-hmr.config.ts --watch user",
     "start:gateway": "cross-env RUNNING_ENV=dev nest start --watch gateway",
     "start:user": "cross-env RUNNING_ENV=dev nest start --watch user",
-    "start:system": "cross-env RUNNING_ENV=dev nest start --webpack --webpackPath webpack-hmr.config.ts --watch system",
+    "start:system": "cross-env RUNNING_ENV=dev nest start system --watch",
     "start:debug": "nest start --debug --watch",
     "start:prod": "node dist/main",
     "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix",

@@ -6,10 +6,8 @@ import { MenuService } from './menu.service';
 export class MenuController {
   constructor(private readonly menuService: MenuService) {}
 
-  @MessagePattern({ cmd: 'getList' })
+  @MessagePattern({ cmd: 'menu' })
   getList() {
-    return JSON.stringify({
-      name: '1',
-    });
+    return this.menuService.getMenuList();
   }
 }
